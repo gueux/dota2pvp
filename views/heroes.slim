@@ -1,0 +1,9 @@
+- unless heroes.empty?
+  table
+    - heroes.each do |heroe|
+      tr
+        - heroe.each do |stat_name, stat_value|
+          td class="#{stat_name.downcase}" = stat_value
+        //td.name = heroe['Name']
+        //td.aligment = heroe['Alignment']
+        //td.movespeed = heroe['Movespeed']

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    == bootstrap_css
+    link href='assets/application.css' media='screen, projection' rel='stylesheet' type='text/css'
+    title Dota2 StatsMan by Gueux - 8.67
+  body
+    header class="navbar navbar-fixed-top"
+      div class="navbar-inner"
+        div class="container"
+          a class='brand' href='/'
+            | Dota2 StatsMan - 8.67
+          ul class='nav'
+            li
+              a href='/' Stats
+            li
+              a href='/heroes' Heroes
+            li
+              a href='/items' Items
+            li 
+              a href='/abilities' Abilities
+    
+    div class="container"
+      
+      == yield
+      
+    footer class="footer"
+      == bootstrap_js
+      script type="text/javascript" src="assets/application.js"
+
+    
