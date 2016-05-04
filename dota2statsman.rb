@@ -7,14 +7,16 @@ require 'sinatra/twitter-bootstrap'
 
 require 'slim'
 require 'coffee_script'
-require 'sprockets'
 
-# stuff in lib
+# stuff for assets
+#require 'sprockets'
 require './lib/sprockets_sinatra_middleware'
+require 'sinatra/sprockets-helpers'
 
 # require './config/config.rb'
 require 'json'
-require 'open-uri'
+require 'active_hash'
+require 'pp'
 
 module Dota2StatsMan
   
@@ -24,14 +26,24 @@ module Dota2StatsMan
 
   class App < Sinatra::Base
     
+    set :root, File.dirname(__FILE__)
+
     register Sinatra::ConfigFile
     config_file 'config/config.yml'
 
+
+    register SprocketsSinatraMiddleware::Assets
+    register Sinatra::Sprockets::Helpers
     register Sinatra::Twitter::Bootstrap::Assets
 
-    set :root, File.dirname(__FILE__)
-    use ::SprocketsSinatraMiddleware, :root => settings.root, :path => 'assets' 
-
+    
+    configure_sprockets_helpers do |helpers|
+      # This will automatically configure Sprockets::Helpers based on the
+      # `sprockets`, `public_folder`, `assets_prefix`, and `digest_assets`
+      # settings if they exist. Otherwise you can configure as normal:
+      helpers.environment = sprockets
+    end
+    
     get '/' do
       slim :index
     end
@@ -45,5 +57,5 @@ module Dota2StatsMan
 end
 
 #require all models
-  Dir['./models/*.rb'].each { |file| require file }
+Dir['./models/*.rb'].each { |file| require file }
 

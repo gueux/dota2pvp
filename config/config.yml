@@ -1,1 +1,3 @@
-heroes_stats_url: http://api.herostats.io/heroes/all
+heroes_json: data/json/npc_heroes.json
+items_json: data/json/items.json
+abilities_json: data/json/npc_abilities.json

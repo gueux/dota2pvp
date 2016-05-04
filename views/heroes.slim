@@ -1,9 +1,21 @@
 - unless heroes.empty?
-  table
+  table.table.table-hover
+    tr
+      th.icon
+      th.name = "Name"
+      th.primary = "Primary Attr"
+      th.strength = "Strength"
+      th.agility = "Agility"
+      th.intelligence = "Intelligence"
+      th.movespeed = "MovementSpeed"
     - heroes.each do |heroe|
-      tr
-        - heroe.each do |stat_name, stat_value|
-          td class="#{stat_name.downcase}" = stat_value
-        //td.name = heroe['Name']
-        //td.aligment = heroe['Alignment']
-        //td.movespeed = heroe['Movespeed']
+      - unless heroe.Name == 'base'
+        tr
+          td.icon 
+            img src="#{image_path heroe[:image_sb]}"
+          td.name = heroe[:url].gsub('_',' ')
+          td.primary = heroe[:AttributePrimary]
+          td.strength = heroe[:AttributeBaseStrength]
+          td.agility = heroe[:AttributeBaseAgility]
+          td.intelligence = heroe[:AttributeBaseIntelligence]
+          td.movespeed = heroe[:MovementSpeed]
