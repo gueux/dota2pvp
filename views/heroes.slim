@@ -13,8 +13,9 @@
         tr
           td.icon 
             img src="#{image_path heroe[:image_sb]}"
-          td.name = heroe[:url].gsub('_',' ')
-          td.primary = heroe[:AttributePrimary]
+          td.name.text-center = heroe[:url].gsub('_',' ')
+          td.primary 
+            img src="#{image_path Heroe::ATTRIBUTES_ICONS[heroe[:AttributePrimary]]}"
           td.strength = heroe[:AttributeBaseStrength]
           td.agility = heroe[:AttributeBaseAgility]
           td.intelligence = heroe[:AttributeBaseIntelligence]

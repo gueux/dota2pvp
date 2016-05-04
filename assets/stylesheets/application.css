@@ -10,3 +10,11 @@ body {
   background-repeat: repeat-x;
   background-position: 0 40px;
 }
+
+th.name, td.name {
+  text-align: center;
+}
+
+td.primary > img {
+  width: 32px;
+}

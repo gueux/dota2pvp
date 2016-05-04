@@ -1,5 +1,11 @@
 class Heroe < ActiveHash::Base
 
+  ATTRIBUTES_ICONS = {
+  	"DOTA_ATTRIBUTE_STRENGTH" => 'attributes/strength.png',
+  	"DOTA_ATTRIBUTE_AGILITY" => 'attributes/agility.png',
+    "DOTA_ATTRIBUTE_INTELLECT" => 'attributes/intelligence.png'
+  }
+
   HEROES_FILE = File.join(Dota2StatsMan.settings.root, Dota2StatsMan.settings.heroes_json)
 
   heroes_in_json = JSON.parse(File.read(HEROES_FILE))["DOTAHeroes"]
