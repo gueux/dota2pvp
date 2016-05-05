@@ -1,19 +1,23 @@
 - unless heroes.empty?
-  table.table.table-hover
-    tr
-      th.icon
-      th.name = "Name"
-      th.primary = "Primary Attr"
-      th.strength = "Strength"
-      th.strength-gain = "StrengthGain"
-      th.agility = "Agility"
-      th.agility-gain = "AgilityGain"
-      th.intelligence = "Intelligence"
-      th.intelligence-gain = "IntelligenceGain"
-      th.movespeed = "MovementSpeed"
+  table.table.table-hover.isortope#heroes
+    thead
+      tr
+        th.icon
+        th.name = "Name"
+        th.primary = "Primary Attr"
+        th.strength = "Strength"
+        th.strength-gain = "StrengthGain"
+        th.agility = "Agility"
+        th.agility-gain = "AgilityGain"
+        th.intelligence = "Intelligence"
+        th.intelligence-gain = "IntelligenceGain"
+        th.armor = "Armor"
+        th.hp = "HP"
+        th.hp = "EffectiveHP"
+        th.movespeed = "MovementSpeed"
     - heroes.each do |heroe|
       - unless heroe.Name == 'base'
-        tr
+        tr.hero.isotope-item id="#{heroe[:Name]}"
           td.icon 
             img src="#{image_path heroe[:image_sb]}"
           td.name.text-center 
@@ -26,4 +30,8 @@
           td.agility-gain = heroe[:AttributeAgilityGain].to_f.round 1
           td.intelligence = heroe[:AttributeBaseIntelligence]
           td.intelligence-gain = heroe[:AttributeIntelligenceGain].to_f.round 1
+          td.armor = heroe[:ArmorPhysical].to_i
+          td.hp = 200 + heroe[:AttributeBaseStrength].to_i * 20
+          - ehp = (200 + heroe[:AttributeBaseStrength].to_i * 20) * ( 1 + heroe[:ArmorPhysical].to_i * 0.06)
+          td.ehp = ehp.round 0 
           td.movespeed = heroe[:MovementSpeed]
