@@ -16,7 +16,6 @@ require 'sinatra/sprockets-helpers'
 # require './config/config.rb'
 require 'json'
 require 'active_hash'
-require 'pp'
 
 module Dota2StatsMan
   

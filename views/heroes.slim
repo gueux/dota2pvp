@@ -5,18 +5,25 @@
       th.name = "Name"
       th.primary = "Primary Attr"
       th.strength = "Strength"
+      th.strength-gain = "StrengthGain"
       th.agility = "Agility"
+      th.agility-gain = "AgilityGain"
       th.intelligence = "Intelligence"
+      th.intelligence-gain = "IntelligenceGain"
       th.movespeed = "MovementSpeed"
     - heroes.each do |heroe|
       - unless heroe.Name == 'base'
         tr
           td.icon 
             img src="#{image_path heroe[:image_sb]}"
-          td.name.text-center = heroe[:url].gsub('_',' ')
+          td.name.text-center 
+            a href="/heroe/#{heroe[:Name]}" = heroe[:url].gsub('_',' ')
           td.primary 
             img src="#{image_path Heroe::ATTRIBUTES_ICONS[heroe[:AttributePrimary]]}"
           td.strength = heroe[:AttributeBaseStrength]
+          td.strength-gain = heroe[:AttributeStrengthGain].to_f.round 1
           td.agility = heroe[:AttributeBaseAgility]
+          td.agility-gain = heroe[:AttributeAgilityGain].to_f.round 1
           td.intelligence = heroe[:AttributeBaseIntelligence]
+          td.intelligence-gain = heroe[:AttributeIntelligenceGain].to_f.round 1
           td.movespeed = heroe[:MovementSpeed]

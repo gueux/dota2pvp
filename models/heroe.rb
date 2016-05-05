@@ -18,7 +18,7 @@ class Heroe < ActiveHash::Base
                             	"Name" => name,
                             	"image_lg" => "heroes/#{name}_lg.png",
                             	"image_sb" => "heroes/#{name}_sb.png",
-                            	"image_vert" => "heroes/#{name}_vert.png",
+                            	"image_vert" => "heroes/#{name}_vert.jpg",
                             	"image_full" => "heroes/#{name}_full.png"
                               }
                               .merge(value)
