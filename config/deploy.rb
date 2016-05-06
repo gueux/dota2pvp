@@ -10,6 +10,9 @@ set :repo_url, 'git@github.com:gueux/dota2pvp.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/gueux/data/www/dota2pvp.wannaproje.tk/'
 
+set :rvm_type, :user                         # Defaults to: :auto
+set :rvm_ruby_version, '2.2.1@dota2pvp'      # Defaults to: 'default'
+
 # Default value for :scm is :git
 # set :scm, :git
 

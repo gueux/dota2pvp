@@ -24,6 +24,9 @@ GEM
     capistrano-harrow (0.4.0)
     capistrano-passenger (0.2.0)
       capistrano (~> 3.0)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -90,6 +93,7 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   capistrano-passenger
+  capistrano-rvm
   coffee-script
   less
   sass

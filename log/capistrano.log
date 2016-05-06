@@ -1,6 +1,0 @@
-# Logfile created on 2016-05-06 14:14:12 +0300 by logger.rb/47272
-  INFO ---------------------------------------------------------------------------
-  INFO START 2016-05-06 14:14:12 +0300 cap production deploy
-  INFO ---------------------------------------------------------------------------
-  INFO [29af3a29] Running /usr/bin/env mkdir -p /tmp/dota2pvp/ as deploy@wannaproje.tk
- DEBUG [29af3a29] Command: /usr/bin/env mkdir -p /tmp/dota2pvp/
