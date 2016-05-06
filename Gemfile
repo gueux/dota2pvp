@@ -14,3 +14,9 @@ gem 'coffee-script'
 gem 'slim'
 gem 'sass'
 gem 'less'
+
+group :development do
+  gem 'capistrano'
+  gem "capistrano-bundler"
+  gem "capistrano-passenger"
+end
