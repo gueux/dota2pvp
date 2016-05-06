@@ -45,6 +45,9 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.1.1)
+    passenger (5.0.28)
+      rack
+      rake (>= 0.8.1)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -96,6 +99,7 @@ DEPENDENCIES
   capistrano-rvm
   coffee-script
   less
+  passenger
   sass
   sinatra
   sinatra-contrib
