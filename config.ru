@@ -1,2 +1,2 @@
-require './dota2statsman'
-Dota2StatsMan::App.run!
+require './dota2pvp'
+Dota2Pvp::App.run!

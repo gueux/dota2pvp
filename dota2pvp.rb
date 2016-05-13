@@ -3,7 +3,6 @@
 # --
 require 'sinatra/base'
 require 'sinatra/config_file'
-require 'sinatra/twitter-bootstrap'
 
 require 'slim'
 require 'coffee_script'
@@ -17,10 +16,10 @@ require 'sinatra/sprockets-helpers'
 require 'json'
 require 'active_hash'
 
-module Dota2StatsMan
+module Dota2Pvp
   
   def self.settings
-    @settings ||= Dota2StatsMan::App.settings
+    @settings ||= Dota2Pvp::App.settings
   end
 
   class App < Sinatra::Base
@@ -33,7 +32,6 @@ module Dota2StatsMan
 
     register SprocketsSinatraMiddleware::Assets
     register Sinatra::Sprockets::Helpers
-    register Sinatra::Twitter::Bootstrap::Assets
 
     
     configure_sprockets_helpers do |helpers|
