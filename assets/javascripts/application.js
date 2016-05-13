@@ -1,2 +1,3 @@
-//= require ./jquery-plugins/isotope.min
-//= require ./jquery-plugins/isortope.min
+//= require ./jquery.min
+//= require ./bootstrap.min
+//= require_directory ./jquery-plugins/

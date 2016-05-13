@@ -33,8 +33,6 @@ GEM
     coffee-script-source (1.10.0)
     commonjs (0.2.7)
     concurrent-ruby (1.0.2)
-    daemons (1.2.3)
-    eventmachine (1.2.0.1)
     execjs (2.6.0)
     i18n (0.7.0)
     json (1.8.3)
@@ -66,7 +64,6 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (>= 1.3, < 3)
-    sinatra-twitter-bootstrap (2.3.4)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -79,10 +76,6 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     temple (0.7.6)
-    thin (1.6.4)
-      daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0, >= 1.0.4)
-      rack (~> 1.0)
     thread_safe (0.3.5)
     tilt (2.0.2)
     tzinfo (1.2.2)
@@ -103,11 +96,9 @@ DEPENDENCIES
   sass
   sinatra
   sinatra-contrib
-  sinatra-twitter-bootstrap
   slim
   sprockets
   sprockets-helpers
-  thin
 
 BUNDLED WITH
-   1.12.2
+   1.12.3

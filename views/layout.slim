@@ -1,16 +1,17 @@
 doctype html
 html
   head
-    == bootstrap_css
+    link href='/assets/favicon.ico' rel='shortcut icon' type='image/x-icon'
     link href="#{stylesheet_path 'application.css'}" media='screen, projection' rel='stylesheet' type='text/css'
     title Dota2 StatsMan by Gueux - 8.67
   body
-    header class="navbar navbar-fixed-top"
-      div class="navbar-inner"
-        div class="container"
-          a class='brand' href='/'
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      div.container
+        div.navbar-header
+          a.navbar-brand href='/'
             | Dota2 StatsMan - 8.67
-          ul class='nav'
+        div.collapse.navbar-collapse
+          ul.nav.navbar-nav
             li
               a href='/' Stats
             li
@@ -25,8 +26,6 @@ html
       == yield
       
     footer class="footer"
-      == bootstrap_js
-      script type="text/javascript" src="http://listjs.com/no-cdn/list.js"
       script type="text/javascript" src="#{javascript_path 'application.js'}"
 
     

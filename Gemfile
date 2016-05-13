@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', :require => "sinatra/base"
-gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'sinatra-contrib'
 
 gem 'sprockets'
@@ -19,7 +18,7 @@ group :production do
 end
 
 group :development do
-  gem 'thin'
+  gem 'passenger'
   gem 'capistrano'
   gem 'capistrano-rvm'
   gem "capistrano-bundler"
